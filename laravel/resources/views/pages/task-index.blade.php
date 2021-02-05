@@ -18,6 +18,10 @@
             {{$task -> title}}
 
             {{$task -> employee -> name}}
+
+            <a href="{{route('task-delete', $task -> id)}}">
+              >>>DELETE<<<
+            </a>
           </li>
 
         @endforeach

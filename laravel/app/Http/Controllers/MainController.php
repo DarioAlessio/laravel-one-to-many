@@ -56,4 +56,20 @@ class MainController extends Controller
       $task = Task::findOrFail($id);
       return view ('pages.task-edit', compact('task', 'employees'));
     }
+
+    public function taskUpdate(Request $request, $id){
+     $task = Task::findOrFail($id);
+     $task -> update($request -> all());
+
+     return redirect() -> route('task-index');
+
+   }
+
+   public function taskDelete($id){
+     $task = Task::findOrFail($id);
+     $task -> delete();
+
+     return redirect() -> route('task-index');
+
+   }
 }
