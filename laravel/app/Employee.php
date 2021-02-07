@@ -14,4 +14,7 @@ class Employee extends Model
    public function tasks(){
          return $this->hasMany('App\Task');
    }
+   public function locations(){
+         return $this->belongsToMany('App\Location');
+   }
 }

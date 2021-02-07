@@ -17,3 +17,8 @@ Route::get('/task/edit/{id}', 'MainController@taskEdit')->name('task-edit');
 Route::post('/task/update/{id}', 'MainController@taskUpdate')-> name('task-update');
 
 Route::get('/task/delete/{id}', 'MainController@taskDelete')-> name('task-delete');
+
+//location
+Route::get('/location', 'MainController@locationIndex')-> name('location-index');
+
+Route::get('/location/{id}', 'MainController@locationShow')->name('location-show');

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Employee;
 use App\Task;
+use App\Location;
+
 
 class MainController extends Controller
 {
@@ -70,6 +72,20 @@ class MainController extends Controller
      $task -> delete();
 
      return redirect() -> route('task-index');
+
+   }
+
+   //location
+   public function locationIndex(){
+      $locations = Location::all();
+      return view ('pages.location-index', compact('locations'));
+
+   }
+
+   public function locationShow($id){
+
+     $location = Location::findOrFail($id);
+     return view ('pages.location-show', compact('location'));
 
    }
 }
