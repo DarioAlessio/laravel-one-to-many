@@ -14,7 +14,20 @@
                       {{-- {{$task -> title}} --}}
 
                       {{$task -> title}}
-                      ({{$task-> employee->name}})
+                      {{-- ({{$task-> employee->name}}) --}}
+                      <ul>
+                        @foreach ($task-> typologies as  $typology)
+
+                          <li>
+                            <h2>TYPOLOGY</h2>
+                            {{$typology -> name}}
+                              {{-- {{$typology -> type}} --}}
+
+
+                          </li>
+
+                        @endforeach
+                      </ul>
                     </li>
               @endforeach
             </ul>

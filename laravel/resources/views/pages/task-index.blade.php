@@ -19,9 +19,9 @@
 
             {{$task -> employee -> name}}
 
-            <a href="{{route('task-delete', $task -> id)}}">
+            {{-- <a href="{{route('task-delete', $task -> id)}}">
               >>>DELETE<<<
-            </a>
+            </a> --}}
           </li>
 
         @endforeach
