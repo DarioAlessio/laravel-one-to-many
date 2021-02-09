@@ -5,19 +5,19 @@ Route::get('/', 'MainController@employeeIndex')->name('employee-index');
 
 Route::get('/employee/{id}', 'MainController@employeeShow')->name('employee-show');
 
-// // task
-// Route::get('/task', 'MainController@taskIndex')->name('task-index');
+// task-> p
+// Route::get('/new/task', 'MainController@taskIndex')->name('newtask-index');
 //
-// Route::get('/task/create', 'MainController@taskCreate')->name('task-create');
+// Route::get('/new/task/create', 'MainController@taskCreate')->name('newtask-create');
 //
-// Route::post('/task/store', 'MainController@taskStore')->name('task-store');
+// Route::post('/new/task/store', 'MainController@taskStore')->name('newtask-store');
 //
-// Route::get('/task/edit/{id}', 'MainController@taskEdit')->name('task-edit');
+// Route::get('/new/task/edit/{id}', 'MainController@taskEdit')->name('newtask-edit');
 //
-// Route::post('/task/update/{id}', 'MainController@taskUpdate')-> name('task-update');
+// Route::post('/new/task/update/{id}', 'MainController@taskUpdate')-> name('newtask-update');
 //
-// Route::get('/task/delete/{id}', 'MainController@taskDelete')-> name('task-delete');
-//
+// Route::get('/new/task/delete/{id}', 'MainController@taskDelete')-> name('newtask-delete');
+
 //location
 Route::get('/location', 'MainController@locationIndex')-> name('location-index');
 
