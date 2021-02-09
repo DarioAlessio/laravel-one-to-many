@@ -50,9 +50,13 @@ class TaskController extends Controller
         $employee = Employee::findOrFail($data['employee_id']);
         $task = Task::findOrFail($id);
         $task -> update($data);
+
         $task -> employee() -> associate($employee);
         $task -> save();
-        $typologies = Typology::findOrFail($data['typologies']);
-        $task -> typologies() -> attach($typologies);
+        if (array_key_exists('typologies', $data)) {
+          $typologies = Typology::findOrFail($data['typologies']);
+          $task -> typologies() -> sync($typologies);
+        }
+
     }
 }
