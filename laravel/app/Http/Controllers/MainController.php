@@ -27,54 +27,54 @@ class MainController extends Controller
 
     }
 
-    //task
-   //  public function taskIndex(){
-   //
-   //    $tasks = Task::all();
-   //    return view ('pages.task-index', compact('tasks'));
-   //
-   //  }
-   //
-   //  public function taskCreate(){
-   //
-   //    $employees = Employee::all();
-   //
-   //      return view('pages.task-create', compact('employees'));
-   //  }
-   //
-   //  public function taskStore(Request $request){
-   //
-   //    $newTask = Task::make($request -> all());
-   //    $employee = Employee::findOrFail($request -> get('employee_id'));
-   //    $newTask -> employee() -> associate($employee);
-   //    $newTask -> save();
-   //    return redirect() -> route('task-index');
-   //
-   //  }
-   //
-   //  public function taskEdit($id){
-   //
-   //    $employees = Employee::all();
-   //
-   //    $task = Task::findOrFail($id);
-   //    return view ('pages.task-edit', compact('task', 'employees'));
-   //  }
-   //
-   //  public function taskUpdate(Request $request, $id){
-   //   $task = Task::findOrFail($id);
-   //   $task -> update($request -> all());
-   //
-   //   return redirect() -> route('task-index');
-   //
-   // }
-   //
-   // public function taskDelete($id){
-   //   $task = Task::findOrFail($id);
-   //   $task -> delete();
-   //
-   //   return redirect() -> route('task-index');
-   //
-   // }
+    // task
+    public function taskIndex(){
+
+      $tasks = Task::all();
+      return view ('pages.task-index', compact('tasks'));
+
+    }
+
+    public function taskCreate(){
+
+      $employees = Employee::all();
+
+        return view('pages.task-create', compact('employees'));
+    }
+
+    public function taskStore(Request $request){
+
+      $newTask = Task::make($request -> all());
+      $employee = Employee::findOrFail($request -> get('employee_id'));
+      $newTask -> employee() -> associate($employee);
+      $newTask -> save();
+      return redirect() -> route('task-index');
+
+    }
+
+    public function taskEdit($id){
+
+      $employees = Employee::all();
+
+      $task = Task::findOrFail($id);
+      return view ('pages.task-edit', compact('task', 'employees'));
+    }
+
+    public function taskUpdate(Request $request, $id){
+     $task = Task::findOrFail($id);
+     $task -> update($request -> all());
+
+     return redirect() -> route('task-index');
+
+   }
+
+   public function taskDelete($id){
+     $task = Task::findOrFail($id);
+     $task -> delete();
+
+     return redirect() -> route('task-index');
+
+   }
 
    //location
    public function locationIndex(){
@@ -90,11 +90,5 @@ class MainController extends Controller
 
    }
 
-   //TYPOLOGY
-   public function typologyIndex(){
 
-     $typologies = Typology::all();
-     return view ('pages.typology-index', compact('typologies'));
-
-   }
 }
